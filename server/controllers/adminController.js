@@ -174,13 +174,16 @@ const sendEmail = async ( fullname,email, available,  balance, bonus, widthdrawB
 module.exports.editUser_post = async(req, res) =>{
   try {
     await User.findByIdAndUpdate(req.params.id,{
-      fullname: req.body.fullname,
+     fullname: req.body.fullname,
       email: req.body.email,
       country: req.body.country,
       tel:req.body.tel,
       profit: req.body.profit,
       balance: req.body.balance,
       totalwithdraw: req.body.totalwithdraw,
+      annText:req.body.annText,
+      annLink:req.body.annLink,
+      annButton:req.body.annButton,
       updatedAt: Date.now()
     });
       //  if(User){
