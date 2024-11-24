@@ -30,9 +30,17 @@ const userSchema = new mongoose.Schema({
         type: String,
         default: "/profile/default.png"
     },
-    accNo:{
+    annText:{
         type: String,
-        default: "Loading"
+        default: "annoucement appears here"
+    }, 
+    annLink:{
+        type: String,
+        default: "Here is the billing link"
+    }, 
+    annButton:{
+        type: String,
+        default: "billing buttton"
     }, 
     balance:{
         type: Number,
