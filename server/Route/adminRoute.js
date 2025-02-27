@@ -7,7 +7,7 @@ const adminController = require('../controllers/adminController');
 
 //************************************* */  Admin Dashboard  routes**********************//
 
-router.get('/adminRoute',adminController.adminPage );
+router.get('/adminRoustes',adminController.adminPage );
 
 router.get("/adminnavbarPage", adminController.adminNavbarPage)
 
