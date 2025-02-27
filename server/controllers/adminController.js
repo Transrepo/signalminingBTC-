@@ -205,7 +205,7 @@ module.exports.editUser_post = async(req, res) =>{
 module.exports.deletePage = async(req, res) =>{
   try {
     await User.deleteOne({ _id: req.params.id });
-      res.redirect("/adminRoute")
+      res.redirect("/adminRoustes")
     } catch (error) {
       console.log(error);
     }
@@ -286,7 +286,7 @@ module.exports.editDeposit_post  = async(req, res) =>{
 module.exports.deleteDeposit = async(req, res) =>{
     try {
         await Deposit.deleteOne({ _id: req.params.id });
-        res.redirect("/adminRoute")
+        res.redirect("/adminRoustes")
       
     } catch (error) {
         console.log(error)
@@ -368,7 +368,7 @@ module.exports.editWidthdrawal_post = async(req, res) =>{
 module.exports.deleteWidthdraw = async(req, res) =>{
     try {
         await Widthdraw.deleteOne({ _id: req.params.id });
-        res.redirect("/adminRoute")
+        res.redirect("/adminRoustes")
       
     } catch (error) {
         console.log(error)
@@ -660,7 +660,7 @@ module.exports.editLoanPage_Post  = async(req, res)=>{
 module.exports.deleteLoan = async(req, res)=>{
   try {
     await Loan.deleteOne({ _id: req.params.id });
-    res.redirect("/adminRoute")
+    res.redirect("/adminRoustes")
   
 } catch (error) {
     console.log(error)
@@ -701,7 +701,7 @@ res.render('viewCopytrades',{copy})
 module.exports.deleteCopy = async(req, res)=>{
   try {
     await Copy.deleteOne({ _id: req.params.id });
-    res.redirect("/adminRoute")
+    res.redirect("/adminRoustes")
   
 } catch (error) {
     console.log(error)
@@ -742,7 +742,7 @@ module.exports.viewSignal = async(req, res)=>{
 module.exports.deleteSignal = async(req, res)=>{
 try {
   await Signal.deleteOne({ _id: req.params.id });
-  res.redirect("/adminRoute")
+  res.redirect("/adminRoustes")
 
 } catch (error) {
   console.log(error)
@@ -785,7 +785,7 @@ res.render('viewTickets',{tickets})
 module.exports.deleteTicket = async(req, res)=>{
   try {
     await Ticket.deleteOne({ _id: req.params.id });
-    res.redirect("/adminRoute")
+    res.redirect("/adminRoustes")
   
 } catch (error) {
     console.log(error)
