@@ -1104,6 +1104,57 @@ window.smartsupp||(function(d) {
 </script>
 <script src="//code.tidio.co/hs7rczxijjxumprrwnc9qvmdn6beuia4.js" async></script>
 
+<div id="google_translate_element" style="display:none"></div>
+<script type="text/javascript">
+
+function readCookie(name) {
+    var c = document.cookie.split('; '),
+    cookies = {}, i, C;
+
+    for (i = c.length - 1; i >= 0; i--) {
+        C = c[i].split('=');
+        cookies[C[0]] = C[1];
+     }
+
+     return cookies[name];
+}
+var lang = readCookie('googtrans').slice(-2);
+$('#language option[value="'+lang+'"]').prop('selected', true);
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: "en"}, 'google_translate_element');
+}
+
+function changeLanguageByButtonClick() {
+  var language = document.getElementById("language").value;
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    // find desired langauge and change the former language of the hidden selection-field 
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       // trigger change event afterwards to make google-lib translate this side
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+}
+
+function changeLanguageByButtonClick2() {
+  var language = document.getElementById("language2").value;
+  var selectField = document.querySelector("#google_translate_element select");
+  for(var i=0; i < selectField.children.length; i++){
+    var option = selectField.children[i];
+    // find desired langauge and change the former language of the hidden selection-field 
+    if(option.value==language){
+       selectField.selectedIndex = i;
+       // trigger change event afterwards to make google-lib translate this side
+       selectField.dispatchEvent(new Event('change'));
+       break;
+    }
+  }
+}
+</script>
 
 </body>
 
